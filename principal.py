@@ -15,6 +15,7 @@ for linha in paginas_clientes.iter_rows(min_row=2):
     telefone = linha[1].value
     vencimento = linha[2].value
 
+
     if not nome or not telefone or not vencimento:
         continue 
 
@@ -22,13 +23,13 @@ for linha in paginas_clientes.iter_rows(min_row=2):
     if not telefone.startswith('+'):
         telefone = f'+55{telefone}' 
 
-    mensagem = f'Olá {nome}, o seu boleto vence na data {vencimento.strftime("%d/%m/%Y")}!'
+    mensagem = f'Olá {nome}! Isso é uma mensagem teste, em que o seu boleto ira vencer na data {vencimento.strftime("%d/%m/%Y")}!'
     print(f'Enviando para {nome} ({telefone}): {mensagem}')
 
     link_mensagem_wpp = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem)}'
     webbrowser.open(link_mensagem_wpp)
-    sleep(10)
+    sleep(12)
     seta = pyautogui.press('enter')
-    sleep(10)
+    sleep(12)
     pyautogui.hotkey('ctrl','w')
-    sleep(5)
+    sleep(7)
