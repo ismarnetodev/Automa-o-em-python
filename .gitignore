@@ -1,0 +1,25 @@
+# Ignorar a planilha com dados sensíveis
+Cópia de clientes.xlsx
+
+# Ignorar arquivos temporários e do sistema
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
+
+# Ignorar ambientes virtuais
+venv/
+.env/
+.env
+
+# Ignorar arquivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignorar configurações de IDEs (VS Code, PyCharm etc)
+.vscode/
+.idea/
+
+# Ignorar imagens ou dados temporários (opcional)
+*.png
